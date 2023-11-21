@@ -49,10 +49,12 @@ CARDSSOURCE.forEach((src) => {
 function flipCard() {
     let currentCard = CARDS.find((card) => card.node.elm == this);
     if (flippedCards.length < 2 && !currentCard.isFlipped) {
-        tweenController.flipObject(currentCard);
-        flippedCards.push(currentCard);
-        if (flippedCards.length === 2) {
-            setTimeout(checkMatch, 1000);
+        if(currentCard!=flippedCards[0]){
+            tweenController.flipObject(currentCard);
+            flippedCards.push(currentCard);
+            if (flippedCards.length === 2) {
+                setTimeout(checkMatch, 1000);
+            }
         }
     }
 }
