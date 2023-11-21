@@ -16,6 +16,7 @@ scoreText.color="white";
 scoreText.fontSize=50;
 scoreText.x=20;
 scoreText.y=20;
+scoreText.elm.style.fontFamily='Arial, Helvetica, sans-serif';
 document.body.appendChild(scoreText.elm);
 const IMAGESOURCES = ["Image/image1.png", "Image/image2.jpeg", "Image/image3.jpeg", "Image/image4.jpeg",
     "Image/image5.jpeg", "Image/image6.jpeg", "Image/image7.jpeg", "Image/image8.jpeg", "Image/image9.png", "Image/image10.png"];
@@ -88,9 +89,4 @@ function updateScore(newUpdateScore) {
     return score + newUpdateScore;
 } function updateScoreText() {
     scoreText.text="Score:"+score;
-}
-function changeAttributeAfterFlip(card){
-    console.log(card.isFlipped)
-card.Flipped=!card.isFlipped;
-console.log(card.isFlipped)
 }
