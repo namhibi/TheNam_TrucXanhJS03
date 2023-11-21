@@ -56,7 +56,7 @@
   
       addChild(node) {
         this.children.push(node);
-        this.elm.addChild(node);
+        this.elm.appendChild(node);
       }
       removeChild(node) {
         this.elm.removeChild(node);
