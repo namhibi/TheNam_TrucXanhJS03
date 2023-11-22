@@ -67,7 +67,6 @@ export class GameManager{
     }
 flipCard(event) {
     let currentCard = this.CARDS.find((card) => card.node.elm === event.currentTarget);
-    console.log(currentCard);
     if (this.isStarGame) {
         if (this.flippedCards.length < 2 && !currentCard.isFlipped) {
             if (currentCard != this.flippedCards[0]) {
