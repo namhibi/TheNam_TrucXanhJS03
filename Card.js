@@ -16,7 +16,6 @@ export class Card {
     }
     get imageSrc() { return this._imageSrc; }
     get coverSrc() { return this._coverSrc; }
-   // set imageDisplay(value){ this.image.imageSrc = value;}
     get isFlipped() { return this._isFlipped; }
       set Flipped(value) {
           this._isFlipped = value;
