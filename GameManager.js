@@ -159,7 +159,7 @@ export class GameManager {
         } else {
             this.tweenController.flipOffObject(card1, card2);
             this.score = this.updateScore(-500);
-            if (this.score < 0) {
+            if (this.score <= 0) {
                 setTimeout(() => {
                     this.messageText.text = "You lose!! Good luck next time";
                     this.messageText.color = "red";
