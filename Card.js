@@ -8,9 +8,8 @@ export class Card {
         this.node = new Node();
         this.image = new Sprite();
         this.node.elm.appendChild(this.image.elm);
-        document.body.appendChild(this.node.elm);
         Card.WIDTH = 160;
-        Card.HEIGHT = 220;
+        Card.HEIGHT = 200;
         Card.x = x;
         Card.y = y;
     }

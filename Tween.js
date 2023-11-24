@@ -50,10 +50,21 @@ export class Tween {
     distributeCards(object,posX,posY,delay){
         const duration = 1;
         gsap.to(object.image, {
-            x: posX,y:posY, duration, delay: delay,
+            x: posX,y:posY, ease: Elastic.easeOut, duration, delay: delay,
         })
-        gsap.to(object.image.elm, {
-            rotation: 360, duration, delay: delay,
-        })
+    }
+    resetGame(object,posY){
+        const duration = 1;
+        let delay=0.5;
+        const childElements = Array.from(object.children); 
+        console.log(childElements);
+        childElements.forEach((element) => {
+            gsap.to(element, {
+                y:posY, duration, delay: delay, onComplete: () => {
+                   object.removeChild(element);
+                }
+            })
+            delay+=0.25;
+        });
     }
 }
